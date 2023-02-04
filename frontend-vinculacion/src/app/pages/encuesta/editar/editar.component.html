@@ -1,0 +1,16 @@
+<p>editar works!</p>
+<div class="card">
+  <div class="card-header">
+      editar
+  </div>
+  <div class="mb-3">
+    <label for="id" class="form-label">editar:</label>
+    <input type="text" id="id" [value]="currentEntity.id" class="form-control">
+    <br>
+    <label for="name" class="form-label">Producto:</label>
+    <input type="text" id="name" [(ngModel)]="currentEntity.name" class="form-control">
+    <br>
+
+
+      <button class="btn btn-success" (click)="createPregunta()" >Guardar</button>
+  </div>

@@ -25,20 +25,17 @@ export class EncuestaHttpService {
     return this.httpClient.get<PreguntaModel[]>(this.url+"/findAll", this.httpOptions);
   }
 
-  // create(product: CreateRespuestaDto):Observable<RespuestaModel> {
-  //   const url = `${this.API_URL}`;
-  //   return this.httpClient.post<RespuestaModel>(url, product);
-  // }
-  // update(id:RespuestaModel['id'], product: UpdateRespuestaDto):Observable<RespuestaModel> {
-  //   const url = `${this.API_URL}/${id}`;
-  //   return this.httpClient.put<RespuestaModel>(url, product);
-  // }
-  // destroy(id:RespuestaModel['id']):Observable<any> {
-  //   const url = `${this.API_URL}/${id}`;
-  //   return this.httpClient.delete<any>(url).
-  //   pipe(map((response:{rta:boolean})=>{return response.rta;})
-  //   );
-  // }
+  create(pregunta: PreguntaModel):Observable<PreguntaModel> {
+
+    return this.httpClient.post<PreguntaModel>(this.url+"/save",pregunta, this.httpOptions);
+  }
+
+  public findById(id: number): Observable<PreguntaModel>{
+    return this.httpClient.get<PreguntaModel>(this.url+"/findById/"+id, this.httpOptions);
+  }
+  deleteById(id: number): Observable<PreguntaModel>{
+    return this.httpClient.delete<PreguntaModel>(this.url+"/deleteById/"+id,this.httpOptions)
+  }
 
 
 }

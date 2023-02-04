@@ -43,6 +43,8 @@ import { FirmasComponent } from './pestanias/firmas/firmas.component';
 import { IntegrantesComponent } from './pestanias/integrantes/integrantes.component';
 import { ObservacionesComponent } from './pestanias/observaciones/observaciones.component';
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
+import { FormsModule } from '@angular/forms';
+import { EditarComponent } from './encuesta/editar/editar.component';
 
 
 
@@ -89,7 +91,8 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
     IntegrantesComponent,
     ObservacionesComponent,
     PlanDeTrabajoComponent,
-    
+    EditarComponent,
+
 
 
 
@@ -132,6 +135,7 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
     HttpClientModule,
     RouterModule,
     SharedModule,
+    FormsModule,
   ]
 })
 export class PagesModule { }

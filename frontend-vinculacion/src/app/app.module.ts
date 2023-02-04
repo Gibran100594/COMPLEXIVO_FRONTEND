@@ -6,6 +6,7 @@ import {HttpClientModule } from '@angular/common/http';
 import { PagesModule } from './pages/pages.module';
 import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -22,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
     PagesModule,
     HttpClientModule,
     SharedModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
