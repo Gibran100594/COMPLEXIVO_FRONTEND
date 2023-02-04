@@ -58,7 +58,7 @@
                   </div>
                  <br>
 
-                 <div class="card1">
+                 <div class="card1"   >
                   <div class="card-body">
                     <p>Objetivo: Recabar informacion en cuanto a los niveles de satisfaccion de los beneficiarios
                       fundamentadosen la ejecucion del Proyeco Academico deServicio Comunitario de Vinculacion con la
@@ -83,14 +83,14 @@
                 <br>
 
 
-                <div class="card1">
+                <div class="card1"  *ngFor = "let pregunta of preguntas">
+
 
                   <div class="card-body">
                    <p data-bs-toggle="collapse" href="#collapseExamplep"
                    role="button" aria-expanded="false" aria-controls="collapseExample">
 
-                   1. Usted como beneficiario considera que el proyecto cumplio con los requerimientos solicitados
-                     de manera?</p>
+                   {{pregunta.id}}.{{pregunta.name}} </p>
 
                      <div class="collapse" id="collapseExamplep">
                        <div class="card3 card-body">
@@ -273,9 +273,15 @@
                               </g>
                             </svg>
                           </div>
+                          <br>
                         </div>
+                        <br>
                       </div>
+                      <br>
                     </div>
+                    <br>
+                  </div>
+                  <br>
                   </div>
 
 
@@ -283,11 +289,12 @@
 
 
                  </div>
-
+<br>
               </div>
               <br>
 
-              <div class="card1">
+
+              <!-- <div class="card1">
 
                 <div class="card-body">
                  <p data-bs-toggle="collapse" href="#collapseExamplep"
@@ -486,9 +493,16 @@
 
 
 
+
+
+
                </div>
 
-            </div>
+
+
+            </div> -->
+            <br><br><br><br><br><br><br><br><br><br>
+
 
             </div>
           </div>
