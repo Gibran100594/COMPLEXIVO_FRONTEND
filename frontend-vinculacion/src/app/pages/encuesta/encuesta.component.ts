@@ -22,10 +22,7 @@ export class EncuestaComponent implements OnInit{
    }
 
    preguntas: PreguntaModel[] = [];
-   selectedPregunta:PreguntaModel = {
-     id: 0,
-     name: ''
-   };
+
 
    currentEntity: PreguntaModel = {
     id: 0,
@@ -35,7 +32,6 @@ export class EncuestaComponent implements OnInit{
 
    ngOnInit(): void {
 
-    this.getpreguntas();
 
     this.activatedRoute.paramMap.subscribe((parametros) => {
       if (parametros.get('id')) {
@@ -44,10 +40,8 @@ export class EncuestaComponent implements OnInit{
     });
 
 
-
-
-
-  }
+    this.getpreguntas();
+ }
 
 
 
@@ -72,30 +66,30 @@ export class EncuestaComponent implements OnInit{
     })
    }
 
-
-
-
-
-  findById(id: number):void{
+   findById(id: number): void {
     this.preguntaHttpService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
       }
-)
+    )
   }
 
+  deleteById(id: PreguntaModel['id']){
+    this.preguntaHttpService.deleteById(id).subscribe(
+     response => {
+      this.preguntas= this.preguntas.filter((pregunta => pregunta.id != id ));
+      console.log(response);
+     }
+    )
+
+    //console.log("hola")
+   }
 
 
-  deleteById():void {
 
-    this.preguntaHttpService.deleteById(this.currentEntity.id).subscribe(
-     () => {
-      this.currentEntity={
-        id: 0,
-        name: '',
-      };
-    })
-  }
+
+
+
 
 
 }

@@ -77,6 +77,7 @@ const routes: Routes = [
   { path: 'informe-final-estudiante', component: InformeFinalEstudianteComponent},
 
   { path: 'encuesta', component: EncuestaComponent},
+  { path: 'encuesta/:id', component: EditarComponent},
  { path: 'editar/:id', component: EditarComponent},
 
   { path: '**', component: NopagesfoundComponent },

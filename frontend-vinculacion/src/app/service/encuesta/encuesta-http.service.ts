@@ -33,9 +33,22 @@ export class EncuestaHttpService {
   public findById(id: number): Observable<PreguntaModel>{
     return this.httpClient.get<PreguntaModel>(this.url+"/findById/"+id, this.httpOptions);
   }
+
   deleteById(id: number): Observable<PreguntaModel>{
     return this.httpClient.delete<PreguntaModel>(this.url+"/deleteById/"+id,this.httpOptions)
   }
+
+  // destroy(id:PreguntaModel['id']):Observable<any> {
+  //   const url_ = `${this.url}/${id}`;
+  //   return this.httpClient.delete<any>(url_).
+  //   pipe(map((response:{rta:boolean})=>{return response.rta;})
+  //   );}
+
+
+
+
+
+
 
 
 }

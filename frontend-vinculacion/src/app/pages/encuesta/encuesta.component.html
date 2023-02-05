@@ -4,6 +4,7 @@
   <br>
   <div class="page-wrapper">
     <div class="container-fluid">
+
       <div class="row">
         <div class="bread col-12">
           <div class="col-9" style="margin-left: 18rem; margin-block-start: -17rem;">
@@ -15,6 +16,7 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="cuadro col-9" style="margin-left: 18rem; margin-block-start: -12rem;">
           <div class="card">
@@ -100,21 +102,18 @@
                             ...
                           </div>
                           <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" (click)="createPregunta()">Save
+                            <button type="button" class="btn btn-secondary">Close</button>
+                            <button type="button" class="btn btn-primary" data-bs-dismiss="modal"
+                              (click)="createPregunta()">Save
                               changes</button>
                           </div>
                         </div>
                       </div>
                     </div>
                   </a>
-                </div>
-                <br>
-
+                </div><br>
 
                 <div class="card1" *ngFor="let pregunta of preguntas">
-
-
                   <div class="card-body">
                     <p data-bs-toggle="collapse" href="#collapseExamplep" role="button" aria-expanded="false"
                       aria-controls="collapseExample">
@@ -125,7 +124,7 @@
                       <div class="card3 card-body">
                         <div class="row">
                           <div class="col-6">
-                            <a type="button" [routerLink]="['../editar', pregunta.id]" >
+                            <a type="button" [routerLink]="['../editar', pregunta.id]">
                               <svg width="20pt" height="20pt" version="1.1" viewBox="0 0 1200 1200"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -140,14 +139,11 @@
                                 </g>
                               </svg>
                             </a>
-
-
-
-
-
                           </div>
+
                           <div class="col-6">
-                            <a type="button" (click)="deleteById()">
+                            <label type="button"  data-bs-toggle="modal"
+                            data-bs-target="#exampleModaldelete" (click)="deleteById(pregunta.id)">
                               <svg width="25pt" height="25pt" version="1.1" viewBox="0 0 700 700"
                                 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <g>
@@ -163,29 +159,23 @@
                                     d="m528.64 123.76h-348.88c-11.762 0-21.281 9.5195-21.281 21.281v323.12c0 50.398 40.879 91.281 91.281 91.281h207.76c50.398 0 91.281-40.879 91.281-91.281l-0.003907-323.12c1.1211-11.758-8.4023-21.277-20.16-21.277zm-21.281 344.96c0 26.879-21.84 49.281-49.281 49.281h-207.76c-26.879 0-49.281-21.84-49.281-49.281v-302.4h306.32v302.4z" />
                                 </g>
                               </svg>
-                            </a>
-                          </div>
+
+
+
+                             
+                            </label>
+
+
+
+
+
                         </div>
                       </div>
                     </div>
                   </div>
-
-
-
-
-
-
-
                 </div>
-                <br>
+
               </div>
-              <br>
-
-
-
-              <br><br><br><br><br><br><br><br><br><br>
-
-
             </div>
           </div>
         </div>

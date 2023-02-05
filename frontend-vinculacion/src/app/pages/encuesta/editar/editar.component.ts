@@ -8,94 +8,57 @@ import { EncuestaHttpService } from 'src/app/service/encuesta/encuesta-http.serv
   templateUrl: './editar.component.html',
   styleUrls: ['./editar.component.css']
 })
-export class EditarComponent implements OnInit{
+export class EditarComponent implements OnInit {
 
 
 
-  constructor(private preguntaHttpService:EncuestaHttpService,
-    private  router: Router,
+  constructor(private preguntaHttpService: EncuestaHttpService,
+    private router: Router,
     private activatedRoute: ActivatedRoute,
 
-    ) {
+  ) {
 
-   }
+  }
 
-   preguntas: PreguntaModel[] = [];
-   selectedPregunta:PreguntaModel = {
-     id: 0,
-     name: ''
-   };
 
-   currentEntity: PreguntaModel = {
+
+  currentEntity: PreguntaModel = {
     id: 0,
     name: '',
 
   };
 
-   ngOnInit(): void {
-
-
-
-
+  ngOnInit(): void {
     this.activatedRoute.paramMap.subscribe((parametros) => {
       if (parametros.get('id')) {
         this.findById(parseInt(parametros.get('id')!));
       }
     });
-
-
-
-
-
   }
 
 
-
-  public getpreguntas() :void{
-    this.preguntaHttpService.getAll().subscribe(
-      (response) => {
-        this.preguntas = response;
-        console.log(response);
-      });
-  }
-
-
-   createPregunta() :void{
-    this.preguntaHttpService.create(this.currentEntity).subscribe(()=>
-    {
-      this.currentEntity={
+  createPregunta(): void {
+    this.preguntaHttpService.create(this.currentEntity).subscribe(() => {
+      this.currentEntity = {
         id: 0,
         name: '',
       };
       this.router.navigate(['/encuesta']);
-
     })
-   }
+  }
 
 
-
-
-
-  findById(id: number):void{
+  findById(id: number): void {
     this.preguntaHttpService.findById(id).subscribe(
       (response) => {
         this.currentEntity = response;
       }
-)
+    )
   }
 
 
 
-  deleteById():void {
 
-    this.preguntaHttpService.deleteById(this.currentEntity.id).subscribe(
-     () => {
-      this.currentEntity={
-        id: 0,
-        name: '',
-      };
-    })
-  }
 
 
 }
