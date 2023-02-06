@@ -24,10 +24,10 @@
 
       <!--Table body-->
       <tbody class="leters">
-        <tr>
-          <th class="text-white" scope="row">1</th>
-          <td class="text-white"> 1207154145 </td>
-          <td class="text-white"> Geovanny Vera </td>
+        <tr *ngFor="let persona of currentEntity.persona_id" >
+          <th class="fw-normal" scope="row">1</th>
+          <td class="fw-normal"> 1207154145 </td>
+          <td class="fw-normal"> Geovanny Vera </td>
           <td>
             <a href="">
               <img class="iconobser" src="../../../../assets/image/ojo-boton.png" alt="">
