@@ -45,6 +45,7 @@ import { ObservacionesComponent } from './pestanias/observaciones/observaciones.
 import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trabajo.component';
 import { FormsModule } from '@angular/forms';
 import { EditarComponent } from './encuesta/editar/editar.component';
+import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
 
 
 
@@ -92,6 +93,7 @@ import { EditarComponent } from './encuesta/editar/editar.component';
     ObservacionesComponent,
     PlanDeTrabajoComponent,
     EditarComponent,
+    RespuestaComponent,
 
 
 

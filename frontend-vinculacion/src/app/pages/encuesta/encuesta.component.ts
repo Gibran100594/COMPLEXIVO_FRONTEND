@@ -9,7 +9,7 @@ import { EncuestaHttpService } from 'src/app/service/encuesta/encuesta-http.serv
   templateUrl: './encuesta.component.html',
   styleUrls: ['./encuesta.component.css']
 })
-export class EncuestaComponent implements OnInit{
+export class  EncuestaComponent implements OnInit{
 
 
 

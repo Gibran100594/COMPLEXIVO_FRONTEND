@@ -31,6 +31,7 @@ import { FormularioFinalTutorComponent } from './pages/docente-tutor/formulario-
 import { InformeFinalEstudianteComponent } from './pages/estudiante/informe-final-estudiante/informe-final-estudiante.component';
 import { EncuestaComponent } from './pages/encuesta/encuesta.component';
 import { EditarComponent } from './pages/encuesta/editar/editar.component';
+import { RespuestaComponent } from './pages/encuesta/respuesta/respuesta.component';
 
 
 const routes: Routes = [
@@ -79,6 +80,8 @@ const routes: Routes = [
   { path: 'encuesta', component: EncuestaComponent},
   { path: 'encuesta/:id', component: EditarComponent},
  { path: 'editar/:id', component: EditarComponent},
+ { path: 'respuesta', component: RespuestaComponent},
+
 
   { path: '**', component: NopagesfoundComponent },
   { path: '', redirectTo: '/desboard', pathMatch: 'full' },
