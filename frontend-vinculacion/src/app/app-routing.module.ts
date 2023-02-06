@@ -32,6 +32,7 @@ import { InformeFinalEstudianteComponent } from './pages/estudiante/informe-fina
 import { EncuestaComponent } from './pages/encuesta/encuesta.component';
 import { EditarComponent } from './pages/encuesta/editar/editar.component';
 import { RespuestaComponent } from './pages/encuesta/respuesta/respuesta.component';
+import { AgregarComponent } from './pages/encuesta/respuesta/agregar-respuesta/agregar.component';
 
 
 const routes: Routes = [
@@ -81,6 +82,7 @@ const routes: Routes = [
   { path: 'encuesta/:id', component: EditarComponent},
  { path: 'editar/:id', component: EditarComponent},
  { path: 'respuesta', component: RespuestaComponent},
+ { path: 'agregar-respuesta', component: AgregarComponent},
 
 
   { path: '**', component: NopagesfoundComponent },

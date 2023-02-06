@@ -46,6 +46,7 @@ import { PlanDeTrabajoComponent } from './pestanias/plan-de-trabajo/plan-de-trab
 import { FormsModule } from '@angular/forms';
 import { EditarComponent } from './encuesta/editar/editar.component';
 import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
+import { AgregarComponent } from './encuesta/respuesta/agregar-respuesta/agregar.component';
 
 
 
@@ -94,6 +95,7 @@ import { RespuestaComponent } from './encuesta/respuesta/respuesta.component';
     PlanDeTrabajoComponent,
     EditarComponent,
     RespuestaComponent,
+    AgregarComponent,
 
 
 
